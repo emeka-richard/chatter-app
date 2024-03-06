@@ -3,14 +3,15 @@ import ReactDOM from 'react-dom/client'
 // import App from './App.tsx'
 import './index.css'
 // import { config } from 'dotenv';
-import { RouterProvider } from "react-router-dom";
-import router from './routes/routes';
+// import { RouterProvider } from "react-router-dom";
+import RouteComponent from './routes/routes';
 
 
 // config();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouteComponent />
+    {/* <RouterProvider router={router} /> */}
   </React.StrictMode>,
 )

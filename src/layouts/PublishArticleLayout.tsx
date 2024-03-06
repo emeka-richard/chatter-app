@@ -1,6 +1,7 @@
 import React, { createContext, useState } from "react";
 import style from "./layouts.module.css";
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
+// import { Outlet, useLocation, useNavigate } from "react-router-dom";
 
 interface ArticleData {
     coverImgUrl: string | null;
@@ -19,7 +20,7 @@ export const ArticleContext = createContext<ArticleContextType | undefined>(
 );
 
 const PublishArticleLayout: React.FC = () => {
-  const location = useLocation();
+  // const location = useLocation();
   const navigate = useNavigate();
   const [articleData, setArticleData] = useState<ArticleData>({
     coverImgUrl: "",
@@ -44,16 +45,16 @@ const PublishArticleLayout: React.FC = () => {
       <section className={style.create_post_container}>
         <ArticleContext.Provider value={{ articleData, setArticleData }}>
           <div className={style.create_post_header_btns_container}>
-            {location.pathname.includes("preview") && (
+            {/* {location.pathname.includes("preview") && ( */}
               <button
                 onClick={() => handleActionClick("edit")}
                 className={style.create_post_header_btn_edit}
               >
                 Edit
               </button>
-            )}
+            {/* )} */}
             <div className={style.create_post_header_btns_right}>
-              {!location.pathname.includes("preview") && (
+              {/* {!location.pathname.includes("preview") && ( */}
                 <button
                   onClick={() => handleActionClick("preview")}
                   className={
@@ -64,7 +65,7 @@ const PublishArticleLayout: React.FC = () => {
                 >
                   Preview
                 </button>
-              )}
+              {/* )} */}
               <button
                 onClick={() => handleActionClick("publish")}
                 className={

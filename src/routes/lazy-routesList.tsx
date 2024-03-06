@@ -3,14 +3,14 @@ import React from "react";
 
 // Lazy load the components
 const LazyComponents = {
-    // AuthLayout: React.lazy(() => import("../layouts/AuthLayout-layouts/AuthLayout")),
+    AuthLayout: React.lazy(() => import("../layouts/AuthLayout-layouts/AuthLayout")),
     AppLayout: React.lazy(() => import("../layouts/AppLayout-layouts/AppLayout")),
-    // ErrorPage: React.lazy(() => import("../UI/Error-Page")),
-    // RegisterUI: React.lazy(() => import("../UI/AuthPage-UI/Register-UIs/Register-UI")),
-    // AuthFrame: React.lazy(() => import("../layouts/AuthLayout-layouts/Auth-Frame")),
-    // AuthRegLogFrame: React.lazy(() => import("../layouts/AuthLayout-layouts/Auth-Reg-Log-Layout/Auth-Reg-Log-Frame")),
-    // AuthAccountVerification: React.lazy(() => import("../layouts/AuthLayout-layouts/Auth-Account-Verify-Layout/Auth-acct-verification")),
-    // LoginUI: React.lazy(() => import("../UI/AuthPage-UI/Login-UIs/Login-UI")),
+    ErrorPage: React.lazy(() => import("../UI/Error-Page")),
+    RegisterUI: React.lazy(() => import("../UI/AuthPage-UI/Register-UIs/Register-UI")),
+    AuthFrame: React.lazy(() => import("../layouts/AuthLayout-layouts/Auth-Frame")),
+    AuthRegLogFrame: React.lazy(() => import("../layouts/AuthLayout-layouts/Auth-Reg-Log-Layout/Auth-Reg-Log-Frame")),
+    AuthAccountVerification: React.lazy(() => import("../layouts/AuthLayout-layouts/Auth-Account-Verify-Layout/Auth-acct-verification")),
+    LoginUI: React.lazy(() => import("../UI/AuthPage-UI/Login-UIs/Login-UI")),
     FeedsUI: React.lazy(() => import("../UI/AppLayout-UI/Feeds-UIs/Feeds-UI")),
     FeedsForYouContentUI: React.lazy(() => import("../UI/AppLayout-UI/Feeds-UIs/Feeds-ForYou-Content-UI")),
     FeedsFeaturedContentUI: React.lazy(() => import("../UI/AppLayout-UI/Feeds-UIs/Feeds-Featured-Content-UI")),
